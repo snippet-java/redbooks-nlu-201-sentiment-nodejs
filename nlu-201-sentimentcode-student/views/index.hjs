@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel='stylesheet' href='/stylesheets/index.css'/>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+        <script src="https://d3js.org/d3-color.v1.min.js"></script>
+        <script type="text/javascript" src='javascripts/personality-sunburst-chart.standalone.js'></script>
+        <script type="text/javascript" src='javascripts/index.js'></script>
+    </head>
+    <body>
+        <div id="frame">
+            <h1>{{ title }}</h1>
+            <!-- ADD INPUT TEXT WITH ID 'tw_search' -->
+            <!-- ADD INPUT BUTTON WITH ID 'analyze' -->
+            <div id='thinking-wrapper' style='display: none;'>
+                <img id='thinking-img' src='/img/watson.gif' alt='Thinking...' />
+            </div>
+            <div id="results" style='display: none;'>
+                <!-- ADD DIV WHERE TO PUT TWEETS, WITH ID 'tweets', AND ADD INSIDE IT A UL ELEMENT -->
+                <!-- ADD DIV WHERE TO PUT PERSONALITY CHART, WITH ID 'personality', AND ADD INSIDE IT ANOTHER EMPTY DIV WITH ID 'sunburstChart' -->
+            </div>
+        </div>
+    </body>
+</html>
