@@ -13,6 +13,7 @@
     "hjs": "~0.0.6",
     "morgan": "~1.7.0",
     "request": "latest",
+    "personality-sunburst-chart": "latest",
     "serve-favicon": "~2.3.2",
     "watson-developer-cloud": "^2.17.1"
   }
