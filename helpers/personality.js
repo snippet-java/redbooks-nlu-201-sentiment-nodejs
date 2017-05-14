@@ -1,8 +1,21 @@
 var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
 
+var PERSONALITY_USER;
+var PERSONALITY_PASSWORD;
+
+if (process.env.VCAP_SERVICES) {
+    var services = JSON.parse(process.env.VCAP_SERVICES);
+    for (var svcName in services) {
+        if (svcName.match("personality_insights")) {
+            PERSONALITY_USER = services[svcName][0].credentials.username;
+            PERSONALITY_PASSWORD = services[svcName][0].credentials.password;
+        }
+    }
+}
+
 var personalityInsights = new PersonalityInsightsV3({
-    username: 'fd0c2a8c-6504-446c-9a20-5a34dc962c1e', // REPLACE WITH YOUR PERSONALITY_INSIGHTS USERNAME
-    password: 'sGtXc1NGAB0Z', // REPLACE WITH YOUR PERSONALITY_INSIGHTS PASSWORD
+    username: PERSONALITY_USER,
+    password: PERSONALITY_PASSWORD,
     version_date: '2016-10-19'
 });
 
